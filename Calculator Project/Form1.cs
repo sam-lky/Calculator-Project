@@ -23,7 +23,12 @@ namespace Calculator_Project
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        // function for btn "0"
+        private void btn_zero_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + "0";
         }
 
        // function for btn "1" 
