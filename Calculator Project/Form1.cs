@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Calculator_Project
 {
     public partial class Form1 : Form
     {
+        double firstNumber;
+        string Operation;
         public Form1()
         {
             InitializeComponent();
@@ -148,10 +151,92 @@ namespace Calculator_Project
             }
         }
 
-        // function for "C"
+        // function for clear - "C"
         private void btn_clear_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
         }
+
+        // function for inserting "dot"
+        private void btn_dot_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + ".";
+        }
+
+        // function for math operation "-"
+        private void btn_minus_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "0";
+            Operation = "-";
+        }
+
+        // function for math oepration "+"
+        private void btn_addition_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "0";
+            Operation = "+";
+        }
+        
+        // function for math operation "*"
+        private void btn_multiply_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "0";
+            Operation = "x";
+        }
+
+        // function for math operation "/"
+        private void btn_divide_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "0";
+            Operation = "÷";
+        }
+
+        // function for final result "="
+        private void btn_equals_Click(object sender, EventArgs e)
+        {
+            double secondNumber;
+            double Result;
+
+            secondNumber = Convert.ToDouble(textBox1.Text);
+
+            if (Operation == "+")
+            {
+                Result = (firstNumber + secondNumber);
+                textBox1.Text = Convert.ToString(Result);
+                firstNumber = Result;
+            }
+
+            if (Operation == "-")
+            {
+                Result = (firstNumber - secondNumber);
+                textBox1.Text = Convert.ToString(Result);
+                firstNumber = Result;
+            }
+
+            if (Operation == "x")
+            {
+                Result = (firstNumber * secondNumber);
+                textBox1.Text = Convert.ToString(Result);
+                firstNumber = Result;
+            }
+
+            if (Operation == "÷")
+            {
+                if (secondNumber == 0)
+                {
+                    textBox1.Text = "Error";
+                }
+                else
+                {
+                    Result = (firstNumber / secondNumber);
+                    textBox1.Text = Convert.ToString(Result);
+                    firstNumber = Result;
+                }
+        }   }
+
     }
 }

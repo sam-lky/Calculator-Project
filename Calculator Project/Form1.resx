@@ -117,4 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_pi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJMAAACACAYAAAAPp1sgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wAAADsABataJCQAAA61JREFUeF7t2uHN2jAURuGOxhiMwRhswRiMwRiMQb+3qqXUshPHeali3/NI90fV
+        kk9VTm0n9NcHMCEm2BATbIgJNsQEG2KCDTHBhphgQ0ywISbYEBNsiAk2xAQbYoINMcGGmGBDTLAhJtgQ
+        E2yICTbEBBtigg0xwYaYYENMsCEm2BATbIgJNsQEG2KCDTHBhphgQ0ywISbYEBNsQsf0fr+r83q9/svk
+        P3dk4WJ6Pp+f2+32uVwup5zH4zFsVGFi0k0q3bwzjlasEU0fk27MmVei0ij8EU0dk0Iq3ayzDyvTyYwa
+        0vV6/fs3GM+UMY0c0qirkkwXU2tIunFpdKZKo1/nf275+7VZfkZT+jO1ud/vf2Z0U8WkR+r8pqbRzWr5
+        V6+bu/xcy2fygGcIo8dUMeUhaLSytG4dpRhb5K8dRn0aO2qamErvkRTXHvk1FGKLntVsRlPElG8zmp7V
+        IY+i9RrLz2iIaWD5obnnzFLa4lqi6N0aZzR8TPnWtHdrS0rbZIverXFGw8ek1UMB6SYeeYrKt7jWKFwx
+        z2CaA/gRpa2q97wU9bWAENOP0hbXe15qjXBGxPQjP8C3bnGup8hZhI+ptLq0nntKKxoxBXYkiPzQrtH/
+        5IwqfEx5DJrWl47E9K/QMZW2uD3vifLPaogpKD3G5zG0PtqXQtQQU0C1GFrPS6UnOQ3vmQIqHbw1rWqf
+        J6aASiHsOS/VYuLrlGBqIbRucVI6b2mIKZj8jXeaPTGVXgto9qxuswkXU+3grdmjFpMmqnAx1ba4vSvK
+        WkwKNqJQMa2tSnu2OFmLae+1ZhEqptqqpGn9CiWpHcA1UQ/hYWJaW5V6Ds1rMWkibnVhYlpblXpWkrXr
+        aSJ+rRImptINT9NzxlEspWulibjVhYhpaxXpsRWTJtpWFyKm2ktKTe9LxtoXvcuJttVNH9PWTe/Z4pK1
+        SDXRtrrpY9q64Ue2oq0nOk0k08dUusFpere4ZOvcdPT6owm9Mh0906y9u9Ic2UJHFDYm139iq32twquB
+        CWn1yINyhSS6vsJZ/oxoT3HJ9DEtffu9z7evf3ahYsJ3ERNsiAk2xAQbYoINMcGGmGBDTLAhJtgQE2yI
+        CTbEBBtigg0xwYaYYENMsCEm2BATbIgJNsQEG2KCDTHBhphgQ0ywISbYEBNsiAk2xAQbYoINMcGGmGBD
+        TLAhJtgQE2yICTbEBBtigg0xwYaYYENMsCEm2BATbIgJNsQEG2KCDTHBhphgQ0ywISaYfD6/Aa9YPaEb
+        70/nAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

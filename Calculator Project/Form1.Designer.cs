@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_ln = new System.Windows.Forms.Button();
             this.btn_log = new System.Windows.Forms.Button();
             this.btn_equals = new System.Windows.Forms.Button();
@@ -91,6 +92,7 @@
             this.btn_equals.TabIndex = 2;
             this.btn_equals.Text = "=";
             this.btn_equals.UseVisualStyleBackColor = false;
+            this.btn_equals.Click += new System.EventHandler(this.btn_equals_Click);
             // 
             // btn_dot
             // 
@@ -102,6 +104,7 @@
             this.btn_dot.TabIndex = 3;
             this.btn_dot.Text = ".";
             this.btn_dot.UseVisualStyleBackColor = false;
+            this.btn_dot.Click += new System.EventHandler(this.btn_dot_Click);
             // 
             // button5
             // 
@@ -124,6 +127,7 @@
             this.btn_zero.TabIndex = 5;
             this.btn_zero.Text = "0";
             this.btn_zero.UseVisualStyleBackColor = false;
+            this.btn_zero.Click += new System.EventHandler(this.btn_zero_Click);
             // 
             // button7
             // 
@@ -144,6 +148,7 @@
             this.btn_addition.TabIndex = 7;
             this.btn_addition.Text = "+";
             this.btn_addition.UseVisualStyleBackColor = true;
+            this.btn_addition.Click += new System.EventHandler(this.btn_addition_Click);
             // 
             // btn_three
             // 
@@ -226,6 +231,7 @@
             this.btn_minus.TabIndex = 14;
             this.btn_minus.Text = "-";
             this.btn_minus.UseVisualStyleBackColor = true;
+            this.btn_minus.Click += new System.EventHandler(this.btn_minus_Click);
             // 
             // btn_seven
             // 
@@ -302,6 +308,7 @@
             this.btn_multiply.TabIndex = 21;
             this.btn_multiply.Text = "x";
             this.btn_multiply.UseVisualStyleBackColor = true;
+            this.btn_multiply.Click += new System.EventHandler(this.btn_multiply_Click);
             // 
             // btn_right_bracket
             // 
@@ -332,15 +339,16 @@
             this.btn_divide.TabIndex = 24;
             this.btn_divide.Text = "÷";
             this.btn_divide.UseVisualStyleBackColor = true;
+            this.btn_divide.Click += new System.EventHandler(this.btn_divide_Click);
             // 
             // btn_pi
             // 
             this.btn_pi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btn_pi.Image = ((System.Drawing.Image)(resources.GetObject("btn_pi.Image")));
             this.btn_pi.Location = new System.Drawing.Point(236, 264);
             this.btn_pi.Name = "btn_pi";
             this.btn_pi.Size = new System.Drawing.Size(98, 90);
             this.btn_pi.TabIndex = 25;
-            this.btn_pi.Text = "π";
             this.btn_pi.UseVisualStyleBackColor = true;
             // 
             // btn_percentage
@@ -399,7 +407,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 898);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(798, 898);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_clear);
@@ -432,6 +441,7 @@
             this.Controls.Add(this.btn_log);
             this.Controls.Add(this.btn_ln);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SHARP Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
