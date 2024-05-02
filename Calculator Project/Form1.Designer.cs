@@ -35,7 +35,7 @@
             this.btn_dot = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_zero = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_inv_x = new System.Windows.Forms.Button();
             this.btn_addition = new System.Windows.Forms.Button();
             this.btn_three = new System.Windows.Forms.Button();
             this.btn_two = new System.Windows.Forms.Button();
@@ -45,11 +45,11 @@
             this.btn_six = new System.Windows.Forms.Button();
             this.btn_minus = new System.Windows.Forms.Button();
             this.btn_seven = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.btn_sqr_root = new System.Windows.Forms.Button();
             this.btn_four = new System.Windows.Forms.Button();
             this.btn_nine = new System.Windows.Forms.Button();
             this.btn_left_bracket = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btn_x_sqr = new System.Windows.Forms.Button();
             this.btn_multiply = new System.Windows.Forms.Button();
             this.btn_right_bracket = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_remove = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.history_Viewer = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btn_ln
@@ -129,15 +130,15 @@
             this.btn_zero.UseVisualStyleBackColor = false;
             this.btn_zero.Click += new System.EventHandler(this.btn_zero_Click);
             // 
-            // button7
+            // btn_inv_x
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(132, 552);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 90);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "1/x";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_inv_x.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inv_x.Location = new System.Drawing.Point(132, 552);
+            this.btn_inv_x.Name = "btn_inv_x";
+            this.btn_inv_x.Size = new System.Drawing.Size(98, 90);
+            this.btn_inv_x.TabIndex = 6;
+            this.btn_inv_x.Text = "1/x";
+            this.btn_inv_x.UseVisualStyleBackColor = true;
             // 
             // btn_addition
             // 
@@ -245,15 +246,16 @@
             this.btn_seven.UseVisualStyleBackColor = false;
             this.btn_seven.Click += new System.EventHandler(this.btn_seven_Click);
             // 
-            // button17
+            // btn_sqr_root
             // 
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(132, 456);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(98, 90);
-            this.button17.TabIndex = 16;
-            this.button17.Text = "√x";
-            this.button17.UseVisualStyleBackColor = true;
+            this.btn_sqr_root.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sqr_root.Location = new System.Drawing.Point(132, 456);
+            this.btn_sqr_root.Name = "btn_sqr_root";
+            this.btn_sqr_root.Size = new System.Drawing.Size(98, 90);
+            this.btn_sqr_root.TabIndex = 16;
+            this.btn_sqr_root.Text = "√x";
+            this.btn_sqr_root.UseVisualStyleBackColor = true;
+            this.btn_sqr_root.Click += new System.EventHandler(this.btn_sqr_root_Click);
             // 
             // btn_four
             // 
@@ -288,16 +290,17 @@
             this.btn_left_bracket.TabIndex = 19;
             this.btn_left_bracket.Text = "(";
             this.btn_left_bracket.UseVisualStyleBackColor = true;
+            this.btn_left_bracket.Click += new System.EventHandler(this.btn_left_bracket_Click);
             // 
-            // button21
+            // btn_x_sqr
             // 
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(132, 360);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(98, 90);
-            this.button21.TabIndex = 20;
-            this.button21.Text = "x²";
-            this.button21.UseVisualStyleBackColor = true;
+            this.btn_x_sqr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_x_sqr.Location = new System.Drawing.Point(132, 360);
+            this.btn_x_sqr.Name = "btn_x_sqr";
+            this.btn_x_sqr.Size = new System.Drawing.Size(98, 90);
+            this.btn_x_sqr.TabIndex = 20;
+            this.btn_x_sqr.Text = "x²";
+            this.btn_x_sqr.UseVisualStyleBackColor = true;
             // 
             // btn_multiply
             // 
@@ -395,7 +398,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(132, 87);
+            this.textBox1.Location = new System.Drawing.Point(132, 139);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(514, 92);
             this.textBox1.TabIndex = 30;
@@ -403,12 +406,22 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // history_Viewer
+            // 
+            this.history_Viewer.FormattingEnabled = true;
+            this.history_Viewer.ItemHeight = 25;
+            this.history_Viewer.Location = new System.Drawing.Point(132, 79);
+            this.history_Viewer.Name = "history_Viewer";
+            this.history_Viewer.Size = new System.Drawing.Size(514, 54);
+            this.history_Viewer.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(798, 898);
+            this.Controls.Add(this.history_Viewer);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_clear);
@@ -419,11 +432,11 @@
             this.Controls.Add(this.button24);
             this.Controls.Add(this.btn_right_bracket);
             this.Controls.Add(this.btn_multiply);
-            this.Controls.Add(this.button21);
+            this.Controls.Add(this.btn_x_sqr);
             this.Controls.Add(this.btn_left_bracket);
             this.Controls.Add(this.btn_nine);
             this.Controls.Add(this.btn_four);
-            this.Controls.Add(this.button17);
+            this.Controls.Add(this.btn_sqr_root);
             this.Controls.Add(this.btn_seven);
             this.Controls.Add(this.btn_minus);
             this.Controls.Add(this.btn_six);
@@ -433,7 +446,7 @@
             this.Controls.Add(this.btn_two);
             this.Controls.Add(this.btn_three);
             this.Controls.Add(this.btn_addition);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btn_inv_x);
             this.Controls.Add(this.btn_zero);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btn_dot);
@@ -457,7 +470,7 @@
         private System.Windows.Forms.Button btn_dot;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btn_zero;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_inv_x;
         private System.Windows.Forms.Button btn_addition;
         private System.Windows.Forms.Button btn_three;
         private System.Windows.Forms.Button btn_two;
@@ -467,11 +480,11 @@
         private System.Windows.Forms.Button btn_six;
         private System.Windows.Forms.Button btn_minus;
         private System.Windows.Forms.Button btn_seven;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button btn_sqr_root;
         private System.Windows.Forms.Button btn_four;
         private System.Windows.Forms.Button btn_nine;
         private System.Windows.Forms.Button btn_left_bracket;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button btn_x_sqr;
         private System.Windows.Forms.Button btn_multiply;
         private System.Windows.Forms.Button btn_right_bracket;
         private System.Windows.Forms.Button button24;
@@ -482,6 +495,7 @@
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_remove;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox history_Viewer;
     }
 }
 

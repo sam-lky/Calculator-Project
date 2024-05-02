@@ -237,6 +237,18 @@ namespace Calculator_Project
                     firstNumber = Result;
                 }
         }   }
+       
+        // function for math operation "sqr root x" 
+        private void btn_sqr_root_Click(object sender, EventArgs e)
+        {
+            firstNumber = double.Parse(textBox1.Text);
+            double result = Math.Sqrt(firstNumber);
+            textBox1.Text = result.ToString();
+        }
+        // function for math operation "left bracket"
+        private void btn_left_bracket_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
